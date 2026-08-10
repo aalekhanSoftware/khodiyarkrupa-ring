@@ -1,0 +1,298 @@
+<main itemscope itemtype="https://schema.org/Organization">
+  <!-- ============ Hero ============ -->
+  <section id="home" class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-ring-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+        <circle cx="100" cy="100" r="74" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+        <circle cx="100" cy="100" r="54" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2.5" />
+        <circle cx="100" cy="100" r="30" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="3" />
+      </svg>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow"><i class="fas fa-cog" aria-hidden="true"></i> Precision CNC Job Work</p>
+      <h1 id="hero-heading">
+        Ring Manufacturing &amp; CNC Job Work
+        <span class="hero-sub">for Auto, Machinery &amp; Vehicle Parts</span>
+      </h1>
+      <p class="hero-lead">
+        We machine rings and turned components from <strong>50mm up to 500mm OD</strong> on your drawings &mdash;
+        auto part items, machinery parts and vehicle parts, finished to tolerance and delivered on time.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg" (click)="scrollTo('contact', $event)">Send Enquiry</a>
+        <a href="#categories" class="btn btn-outline-light btn-lg" (click)="scrollTo('categories', $event)">View Categories</a>
+      </div>
+
+      <div class="hero-stats row g-3">
+        <div class="col-6 col-lg-3" *ngFor="let stat of stats">
+          <div class="stat-box">
+            <span class="stat-value">{{ stat.value }}<small>{{ stat.suffix }}</small></span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Categories ============ -->
+  <section id="categories" class="category-section" aria-labelledby="categories-heading">
+    <div class="container">
+      <h2 id="categories-heading" class="section-title">What We Manufacture</h2>
+      <p class="section-subtitle">
+        Job work for <strong>auto part items</strong>, <strong>machinery parts</strong> and
+        <strong>vehicle parts</strong> &mdash; machined as per your drawing or sample.
+      </p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" *ngFor="let cat of categories; trackBy: trackByCategory">
+          <article class="category-card" itemscope itemtype="https://schema.org/Service">
+            <span class="category-icon" aria-hidden="true">
+              <i class="fas fa-{{ cat.icon }}"></i>
+            </span>
+            <h3 itemprop="name">{{ cat.name }}</h3>
+            <p itemprop="description">{{ cat.shortDesc }}</p>
+            <ul class="category-examples" [attr.aria-label]="'Example ' + cat.name">
+              <li *ngFor="let ex of cat.examples"><i class="fas fa-check" aria-hidden="true"></i> {{ ex }}</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section id="about" class="about-section bg-primary-lightest" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="about-visual" aria-hidden="true">
+            <div class="ring-illustration">
+              <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Precision ring with 500mm outer diameter">
+                <circle cx="160" cy="160" r="140" fill="var(--primary-lightest)" stroke="var(--primary)" stroke-width="6" />
+                <circle cx="160" cy="160" r="88" fill="var(--primary-lightest)" stroke="var(--primary-lighter)" stroke-width="4" />
+                <circle cx="160" cy="160" r="36" fill="var(--primary-lightest)" stroke="var(--primary-lighter)" stroke-width="3" />
+                <line x1="160" y1="20" x2="160" y2="300" stroke="var(--accent)" stroke-width="3" stroke-dasharray="6 6" />
+                <line x1="20" y1="160" x2="300" y2="160" stroke="var(--accent)" stroke-width="3" stroke-dasharray="6 6" />
+                <text x="188" y="32" font-family="DM Sans, sans-serif" font-size="20" fill="var(--primary-dark)" font-weight="600">500 mm</text>
+                <text x="230" y="158" font-family="DM Sans, sans-serif" font-size="20" fill="var(--primary-dark)" font-weight="600">OD</text>
+                <text x="34" y="150" font-family="DM Sans, sans-serif" font-size="16" fill="var(--primary)" font-weight="600">50 mm</text>
+              </svg>
+            </div>
+            <div class="about-badge">
+              <i class="fas fa-ruler-combined" aria-hidden="true"></i>
+              <span>Rings up to <strong>500mm OD</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h2 id="about-heading">About Khodiyar Krupa Ring</h2>
+            <p>
+              <strong>Khodiyar Krupa Ring</strong> is a CNC job work workshop that makes rings and turned components
+              for the automobile, machinery and vehicle industries. We take work on a job work basis &mdash;
+              you bring the drawing or sample, we machine the part.
+            </p>
+            <p>
+              Our lathes handle components from <strong>50mm up to 500mm outer diameter</strong>. Everyday parts we
+              produce include bushes, spacers, sleeves, flanges, bearing rings and distance pieces used in gearboxes,
+              pumps, axles and industrial machines.
+            </p>
+            <p>
+              We keep the job simple: correct material, correct dimensions, clean finish, and delivery on the promised
+              date. Whether it is a single prototype or a running batch, each part is checked against the drawing before dispatch.
+            </p>
+            <a href="#contact" class="btn btn-primary" (click)="scrollTo('contact', $event)">Discuss Your Job Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Capabilities ============ -->
+  <section id="capabilities" class="capability-section" aria-labelledby="capabilities-heading">
+    <div class="container">
+      <h2 id="capabilities-heading" class="section-title">Our Machining Capabilities</h2>
+      <p class="section-subtitle">
+        Complete turning, boring and finishing for <strong>rings up to 500mm OD</strong>, done as job work on your specifications.
+      </p>
+
+      <div class="row g-4 showcase-row">
+        <div class="col-md-4" *ngFor="let img of showcase; trackBy: trackByShowcase">
+          <figure class="showcase-card">
+            <img [src]="img.src" [alt]="img.alt" loading="lazy" />
+            <figcaption>{{ img.caption }}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" *ngFor="let cap of capabilities; trackBy: trackByCapability">
+          <div class="capability-card">
+            <h3>{{ cap.title }}</h3>
+            <p>{{ cap.desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="size-banner">
+        <div class="size-icon" aria-hidden="true"><i class="fas fa-circle-notch"></i></div>
+        <div class="size-text">
+          <h3>Maximum component size: <span>500mm Outer Diameter</span></h3>
+          <p>Send us your drawing &mdash; we confirm feasibility, machining route and job work rate before starting.</p>
+        </div>
+      </div>
+
+      <div class="materials-row">
+        <h3 class="materials-title">Materials We Machine</h3>
+        <div class="material-chips">
+          <span class="material-chip" *ngFor="let mat of materials">{{ mat }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Why Us ============ -->
+  <section id="why-us" class="feature-section bg-secondary-lightest" aria-labelledby="why-us-heading">
+    <div class="container">
+      <h2 id="why-us-heading" class="section-title">Why Customers Give Us Job Work</h2>
+      <p class="section-subtitle">Reliable machining that keeps your parts within tolerance and your deliveries on schedule.</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" *ngFor="let feature of features; trackBy: trackByFeature">
+          <div class="feature-card">
+            <div class="icon" aria-hidden="true">
+              <i class="fas fa-{{ feature.icon }}"></i>
+            </div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Process ============ -->
+  <section id="process" class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading" class="section-title">How Job Work Works</h2>
+      <p class="section-subtitle">A simple, transparent process from drawing to dispatch.</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" *ngFor="let step of processSteps; trackBy: trackByStep">
+          <div class="process-card">
+            <span class="step-number">{{ step.step }}</span>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contact / Enquiry ============ -->
+  <section id="contact" class="contact-section bg-primary" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <div class="contact-intro">
+            <h2 id="contact-heading" class="text-white">Send Your Enquiry</h2>
+            <p class="text-white">
+              Have a drawing or a sample? Share your requirement and we will get back with a clear job work rate and delivery date.
+            </p>
+            <ul class="contact-points">
+              <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919714073207" class="text-white">+91 97140 73207</a></li>
+              <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@khodiyarkruparing.com" class="text-white">info&#64;khodiyarkruparing.com</a></li>
+              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="text-white">GIDC Industrial Estate, Vadodara, Gujarat, India</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <form class="enquiry-form" (ngSubmit)="onSubmit($event)" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Your Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Full name"
+                  [(ngModel)]="formState.name"
+                  [ngModelOptions]="{ standalone: true }"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Mobile Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="10-digit mobile number"
+                  [(ngModel)]="formState.phone"
+                  [ngModelOptions]="{ standalone: true }"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email (optional)</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="you@example.com"
+                  [(ngModel)]="formState.email"
+                  [ngModelOptions]="{ standalone: true }"
+                  autocomplete="email"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="category" class="form-label">Part Category</label>
+                <select
+                  id="category"
+                  name="category"
+                  class="form-select"
+                  [(ngModel)]="formState.category"
+                  [ngModelOptions]="{ standalone: true }"
+                >
+                  <option value="">Select category</option>
+                  <option value="Auto Part Items">Auto Part Items</option>
+                  <option value="Machinery Part">Machinery Part</option>
+                  <option value="Vehicle Part">Vehicle Part</option>
+                  <option value="Other / Not sure">Other / Not sure</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Your Requirement *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  rows="4"
+                  placeholder="e.g. Need 30 rings, 300mm OD, mild steel, drawing attached. What is your job work rate?"
+                  [(ngModel)]="formState.message"
+                  [ngModelOptions]="{ standalone: true }"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <p class="form-error" *ngIf="formError" role="alert">{{ formError }}</p>
+            <p class="form-success" *ngIf="submitted" role="status">
+              <i class="fas fa-check-circle" aria-hidden="true"></i> Thank you! Your enquiry has been opened in WhatsApp. We will reply shortly.
+            </p>
+
+            <button type="submit" class="btn btn-accent btn-lg mt-3">Send Enquiry via WhatsApp</button>
+            <p class="form-note mt-3">
+              Submitting opens a WhatsApp chat with your details pre-filled. No data is stored on this website.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

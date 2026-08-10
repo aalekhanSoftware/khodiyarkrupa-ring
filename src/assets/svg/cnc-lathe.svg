@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="latheTitle latheDesc">
+  <title id="latheTitle">CNC Lathe Turning Center</title>
+  <desc id="latheDesc">Illustration of a CNC turning center machining a ring component held in a three-jaw chuck, with tool turret and tailstock.</desc>
+  <defs>
+    <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f66ac"/>
+      <stop offset="1" stop-color="#122a55"/>
+    </linearGradient>
+    <linearGradient id="bedLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7490c6"/>
+      <stop offset="1" stop-color="#224d9c"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="workpiece" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="0.55" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e5ab75"/>
+      <stop offset="0.35" stop-color="#d5843d"/>
+      <stop offset="1" stop-color="#a34f08"/>
+    </linearGradient>
+    <linearGradient id="housing" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a3a78"/>
+      <stop offset="1" stop-color="#0f2447"/>
+    </linearGradient>
+  </defs>
+
+  <!-- floor shadow -->
+  <ellipse cx="400" cy="508" rx="330" ry="22" fill="rgba(18,42,85,0.10)"/>
+
+  <!-- machine base cabinet -->
+  <rect x="70" y="430" width="660" height="60" rx="12" fill="url(#bed)"/>
+  <rect x="70" y="426" width="660" height="8" rx="4" fill="url(#bedLight)"/>
+  <rect x="120" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="210" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="300" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="390" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="480" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="570" y="444" width="70" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+  <rect x="660" y="444" width="60" height="32" rx="6" fill="rgba(255,255,255,0.07)"/>
+
+  <!-- upper slant bed -->
+  <path d="M70 400 L70 368 L150 330 L630 330 L740 372 L740 400 Z" fill="url(#bed)"/>
+  <rect x="150" y="326" width="480" height="8" rx="4" fill="url(#bedLight)"/>
+
+  <!-- headstock -->
+  <rect x="90" y="150" width="134" height="180" rx="16" fill="url(#housing)"/>
+  <rect x="98" y="158" width="118" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="224" y="230" width="16" height="56" rx="4" fill="#64748b"/>
+  <!-- chuck -->
+  <circle cx="240" cy="258" r="42" fill="url(#steel)"/>
+  <circle cx="240" cy="258" r="30" fill="#cbd5e1"/>
+  <rect x="234" y="222" width="12" height="16" rx="3" fill="#64748b"/>
+  <rect x="260" y="240" width="12" height="16" rx="3" fill="#64748b"/>
+  <rect x="216" y="240" width="12" height="16" rx="3" fill="#64748b"/>
+  <circle cx="240" cy="258" r="7" fill="#2b3444"/>
+
+  <!-- workpiece ring being turned -->
+  <rect x="230" y="208" width="344" height="100" rx="8" fill="url(#workpiece)"/>
+  <rect x="520" y="214" width="10" height="88" rx="4" fill="#94a3b8"/>
+  <ellipse cx="574" cy="258" rx="9" ry="42" fill="#2b3444"/>
+
+  <!-- tool turret -->
+  <rect x="410" y="334" width="120" height="70" rx="14" fill="url(#orange)"/>
+  <rect x="430" y="322" width="80" height="14" rx="4" fill="#a34f08"/>
+  <rect x="450" y="306" width="40" height="18" rx="5" fill="#475569"/>
+  <polygon points="456,306 484,306 484,300 470,294 456,300" fill="#e2e8f0" stroke="#94a3b8"/>
+
+  <!-- tailstock -->
+  <rect x="610" y="190" width="114" height="182" rx="16" fill="url(#housing)"/>
+  <rect x="620" y="198" width="94" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="570" y="244" width="40" height="28" rx="5" fill="#64748b"/>
+  <polygon points="570,258 556,258 570,244" fill="#94a3b8"/>
+
+  <!-- guard -->
+  <rect x="250" y="118" width="330" height="44" rx="22" fill="rgba(63,102,172,0.28)"/>
+  <rect x="260" y="162" width="8" height="170" rx="4" fill="#334155" opacity="0.8"/>
+  <rect x="560" y="162" width="8" height="170" rx="4" fill="#334155" opacity="0.8"/>
+
+  <!-- coolant nozzle and stream -->
+  <rect x="322" y="150" width="14" height="26" rx="5" fill="url(#orange)"/>
+  <path d="M329 176 C 338 216 348 250 390 284" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- chips -->
+  <path d="M500 296 C 512 288 520 292 524 302" stroke="#f2b41c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="532" cy="308" r="4" fill="#f2b41c"/>
+  <path d="M486 310 C 492 322 504 326 516 322" stroke="#f5c34a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="526" cy="326" r="3.5" fill="#f2b41c"/>
+
+  <!-- control panel -->
+  <rect x="612" y="46" width="180" height="112" rx="12" fill="url(#housing)"/>
+  <rect x="626" y="58" width="152" height="58" rx="6" fill="#0f2447"/>
+  <rect x="636" y="70" width="60" height="6" rx="3" fill="#3f66ac"/>
+  <rect x="636" y="84" width="40" height="6" rx="3" fill="#7490c6"/>
+  <rect x="636" y="98" width="52" height="6" rx="3" fill="#f2b41c"/>
+  <circle cx="650" cy="146" r="7" fill="#f2b41c"/>
+  <circle cx="680" cy="146" r="7" fill="#c9680d"/>
+  <circle cx="710" cy="146" r="7" fill="#64748b"/>
+  <rect x="714" y="158" width="10" height="34" rx="4" fill="#334155"/>
+
+  <text x="70" y="42" font-family="DM Sans, sans-serif" font-size="24" font-weight="700" fill="#224d9c">CNC Turning Center</text>
+</svg>

@@ -1,0 +1,122 @@
+@import '../../../styles.scss';
+
+.main-header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+
+  &.scrolled {
+    box-shadow: 0 4px 18px rgba(var(--primary-rgb), 0.16);
+  }
+
+  .navbar {
+    padding: 0.75rem 0;
+
+    .navbar-brand {
+      display: inline-flex;
+      align-items: center;
+
+      .logo {
+        height: 72px;
+        width: auto;
+        max-width: 190px;
+        object-fit: contain;
+      }
+    }
+
+    .nav-link {
+      color: var(--gray-700);
+      font-family: var(--font-primary);
+      font-weight: var(--font-medium);
+      font-size: var(--text-base);
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+      touch-action: manipulation;
+
+      &:hover, &.active {
+        color: var(--primary);
+      }
+
+      &.active {
+        font-weight: var(--font-semibold);
+      }
+    }
+
+    .navbar-toggler {
+      border-color: var(--primary);
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34, 77, 156, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .main-header {
+    .navbar {
+      padding: 0.5rem 0;
+
+      .navbar-brand .logo {
+        height: 60px;
+        max-width: 150px;
+      }
+    }
+
+    .navbar .container {
+      position: relative;
+    }
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 42, 85, 0.4);
+    z-index: 999;
+    touch-action: manipulation;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .navbar-collapse {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.18);
+    margin-top: 0;
+    position: fixed;
+    top: 88px;
+    left: max(0.75rem, env(safe-area-inset-left));
+    right: max(0.75rem, env(safe-area-inset-right));
+    z-index: 1001;
+    max-height: calc(100dvh - 110px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+
+    .nav-link {
+      padding: 0.75rem 1rem;
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      touch-action: manipulation;
+      border-radius: 6px;
+
+      &.active {
+        background: var(--primary-lightest);
+        color: var(--primary);
+      }
+    }
+  }
+}

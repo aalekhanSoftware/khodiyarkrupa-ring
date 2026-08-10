@@ -1,0 +1,159 @@
+// Color Palette - Khodiyar Krupa Ring
+:root {
+  // Primary Colors (Navy Blue - brand primary #224d9c)
+  --primary: #224d9c;
+  --primary-dark: #1a3a78;
+  --primary-darker: #122a55;
+  --primary-light: #3f66ac;
+  --primary-lighter: #7490c6;
+  --primary-lightest: #e9eef7;
+
+  // Secondary Colors (Burnt Orange - warm industrial contrast)
+  --secondary: #c9680d;
+  --secondary-dark: #a34f08;
+  --secondary-light: #d5843d;
+  --secondary-lighter: #e5ab75;
+  --secondary-lightest: #f9efe2;
+
+  // Accent Colors (Golden Yellow - highlights, underlines, ratings)
+  --accent: #f2b41c;
+  --accent-light: #f5c34a;
+  --accent-lighter: #f9d77e;
+  --accent-lightest: #fdf5e4;
+
+  // Gray Scale
+  --gray-900: #17202e;
+  --gray-800: #2b3444;
+  --gray-700: #4a5568;
+  --gray-600: #64748b;
+  --gray-500: #94a3b8;
+  --gray-400: #cbd5e1;
+  --gray-300: #e2e8f0;
+  --gray-200: #edf2f7;
+  --gray-100: #f7fafc;
+
+  // Font Family Variables - premium, professional, engineering feel
+  --font-primary: 'DM Sans', sans-serif;
+  --font-secondary: 'Libre Baskerville', serif;
+  --font-accent: 'Manrope', sans-serif;
+
+  // Font Weights
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  // Font Sizes
+  --text-xs: 0.75rem;    // 12px
+  --text-sm: 0.875rem;   // 14px
+  --text-base: 1rem;     // 16px
+  --text-lg: 1.125rem;   // 18px
+  --text-xl: 1.25rem;    // 20px
+  --text-2xl: 1.5rem;    // 24px
+  --text-3xl: 1.875rem;  // 30px
+  --text-4xl: 2.25rem;   // 36px
+  --text-5xl: 3rem;      // 48px
+
+  --primary-rgb: 34, 77, 156;    /* Match your primary color */
+  --secondary-rgb: 201, 104, 13; /* Match your secondary color */
+  --accent-rgb: 242, 180, 28;    /* Match your accent color */
+}
+
+// SCSS Variables
+$primary: var(--primary);
+$primary-light: var(--primary-light);
+$primary-lighter: var(--primary-lighter);
+$primary-lightest: var(--primary-lightest);
+
+$secondary: var(--secondary);
+$secondary-light: var(--secondary-light);
+$secondary-lighter: var(--secondary-lighter);
+$secondary-lightest: var(--secondary-lightest);
+
+$accent: var(--accent);
+$accent-light: var(--accent-light);
+$accent-lighter: var(--accent-lighter);
+$accent-lightest: var(--accent-lightest);
+
+// Additional utility classes - Using !important to override Bootstrap defaults
+.bg-primary { background-color: $primary !important; }
+.bg-primary-dark { background-color: var(--primary-dark) !important; }
+.bg-primary-light { background-color: $primary-light !important; }
+.bg-primary-lighter { background-color: $primary-lighter !important; }
+.bg-primary-lightest { background-color: $primary-lightest !important; }
+
+.bg-secondary { background-color: $secondary !important; }
+.bg-secondary-light { background-color: $secondary-light !important; }
+.bg-secondary-lighter { background-color: $secondary-lighter !important; }
+.bg-secondary-lightest { background-color: $secondary-lightest !important; }
+
+.bg-accent { background-color: $accent !important; }
+.bg-accent-light { background-color: $accent-light !important; }
+.bg-accent-lighter { background-color: $accent-lighter !important; }
+.bg-accent-lightest { background-color: $accent-lightest !important; }
+
+.text-primary { color: $primary !important; }
+.text-primary-dark { color: var(--primary-dark) !important; }
+.text-secondary { color: $secondary !important; }
+.text-accent { color: $accent !important; }
+
+// Typography Utility Classes
+.font-primary { font-family: var(--font-primary); }
+.font-secondary { font-family: var(--font-secondary); }
+.font-accent { font-family: var(--font-accent); }
+
+.font-regular { font-weight: var(--font-regular); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+// Base Typography Styles
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--gray-700);
+  touch-action: manipulation;
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+// Performance: only render content once visible
+// Applies to large sections and containers to reduce layout/paint during scroll
+.hero-section, .category-section, .about-section, .capability-section, .feature-section, .process-section, .quality-section, .contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  // Hint browser for better decoding and memory usage
+  image-rendering: -webkit-optimize-contrast;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+// Responsive Typography
+@media (max-width: 768px) {
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+  h3 { font-size: var(--text-2xl); }
+  h4 { font-size: var(--text-xl); }
+  h5 { font-size: var(--text-lg); }
+  h6 { font-size: var(--text-base); }
+}
