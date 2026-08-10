@@ -52,8 +52,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   private readonly baseUrl = environment.baseUrl;
 
   readonly orgName = 'Khodiyar Krupa Ring';
-  private readonly whatsappNumber = '919714073207';
-  private readonly phoneTel = '+919714073207';
+  private readonly whatsappNumber = '919725995010';
+  private readonly phoneTel = '+919725995010';
   private readonly author = 'Khodiyar Krupa Ring';
 
   categories: Category[] = [
@@ -207,7 +207,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private title: Title,
     private transferState: TransferState,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.setMetaData();
@@ -226,7 +226,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const pageDescription =
       'Khodiyar Krupa Ring is a precision CNC job work workshop manufacturing auto parts, machinery parts and vehicle parts. Ring manufacturing up to 500mm OD with turning, boring and finishing under one roof.';
     const pageKeywords =
-      'CNC job work, ring manufacturing, auto parts manufacturer, machinery parts job work, vehicle parts supplier, 500mm OD rings, precision turned components, CNC turning Gujarat, rings manufacturer Vadodara';
+      'CNC job work, ring manufacturing, auto parts manufacturer, machinery parts job work, vehicle parts supplier, 500mm OD rings, precision turned components, CNC turning Gujarat, rings manufacturer Rajkot';
 
     this.title.setTitle(pageTitle);
 
@@ -281,14 +281,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       priceRange: 'INR',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'GIDC Industrial Estate',
-        addressLocality: 'Vadodara',
+        streetAddress: 'SURVEY NO:-166, HARI OM IND.AREA, PLOT NO:-66, Kothariya Ring Road, SANDHIYA PUL',
+        addressLocality: 'Rajkot',
         addressRegion: 'Gujarat',
-        postalCode: '390010',
+        postalCode: '360022',
         addressCountry: 'IN'
       },
       areaServed: [
-        { '@type': 'City', name: 'Vadodara' },
+        { '@type': 'City', name: 'Rajkot' },
         { '@type': 'State', name: 'Gujarat' },
         { '@type': 'Country', name: 'India' }
       ]

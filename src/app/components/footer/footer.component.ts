@@ -26,8 +26,8 @@ export class FooterComponent implements OnInit, OnDestroy {
     'Precision CNC job work workshop for ring manufacturing. We machine auto parts, machinery parts and vehicle parts up to 500mm OD with turning, boring, threading and finishing under one roof.';
   readonly logoUrl = `${this.baseUrl}/assets/logo/logo.jpeg`;
   readonly organizationUrl = this.baseUrl;
-  readonly contactPhone = '+919714073207';
-  readonly whatsappNumber = '919714073207';
+  readonly contactPhone = '+919725995010';
+  readonly whatsappNumber = '919725995010';
   readonly contactEmail = 'info@khodiyarkruparing.com';
 
   quickLinks: FooterNavLink[] = [
@@ -59,7 +59,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: object
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.injectStructuredData();
@@ -130,7 +130,7 @@ export class FooterComponent implements OnInit, OnDestroy {
       description: this.organizationDescription,
       address: this.businessAddress(),
       areaServed: [
-        { '@type': 'City', name: 'Vadodara' },
+        { '@type': 'City', name: 'Rajkot' },
         { '@type': 'State', name: 'Gujarat' },
         { '@type': 'Country', name: 'India' }
       ],
@@ -159,10 +159,10 @@ export class FooterComponent implements OnInit, OnDestroy {
   private businessAddress(): object {
     return {
       '@type': 'PostalAddress',
-      streetAddress: 'GIDC Industrial Estate',
-      addressLocality: 'Vadodara',
+      streetAddress: 'SURVEY NO:-166, HARI OM IND.AREA, PLOT NO:-66, Kothariya Ring Road, SANDHIYA PUL',
+      addressLocality: 'Rajkot',
       addressRegion: 'Gujarat',
-      postalCode: '390010',
+      postalCode: '360022',
       addressCountry: 'IN'
     };
   }

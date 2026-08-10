@@ -5,33 +5,23 @@
       <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
         <div class="footer-brand" itemscope itemtype="https://schema.org/Organization">
           <meta itemprop="url" [attr.content]="organizationUrl" />
-          <img
-            src="assets/logo/logo.jpeg"
-            itemprop="logo"
-            alt="Khodiyar Krupa Ring Logo"
-            class="footer-logo mb-3"
-            width="150"
-            height="85"
-          />
+          <img src="assets/logo/logo.jpeg" itemprop="logo" alt="Khodiyar Krupa Ring Logo" class="footer-logo mb-3"
+            width="150" height="85" />
           <meta itemprop="name" content="Khodiyar Krupa Ring" />
           <p class="company-description" itemprop="description">
-            Precision CNC job work workshop for ring manufacturing. Auto parts, machinery parts and vehicle parts machined up to 500mm OD with turning, boring and finishing under one roof.
+            Precision CNC job work workshop for ring manufacturing. Auto parts, machinery parts and vehicle parts
+            machined up to 500mm OD with turning, boring and finishing under one roof.
           </p>
           <meta itemprop="email" content="info@khodiyarkruparing.com" />
-          <meta itemprop="telephone" content="+919714073207" />
+          <meta itemprop="telephone" content="+919725995010" />
         </div>
 
         <div class="social-connect mt-4">
           <h6 class="text-uppercase mb-3">Connect With Us</h6>
           <div class="social-links">
             <ng-container *ngFor="let social of socialLinks">
-              <a
-                [href]="social.url"
-                target="_blank"
-                rel="noopener noreferrer"
-                [attr.aria-label]="social.label"
-                class="social-btn"
-              >
+              <a [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.label"
+                class="social-btn">
                 <i [class]="social.icon"></i>
               </a>
             </ng-container>
@@ -45,11 +35,7 @@
         <nav aria-label="Footer Navigation">
           <ul class="footer-links">
             <li *ngFor="let link of quickLinks">
-              <a
-                href="#{{ link.target }}"
-                (click)="scrollToSection(link.target, $event)"
-                itemprop="url"
-              >
+              <a href="#{{ link.target }}" (click)="scrollToSection(link.target, $event)" itemprop="url">
                 <span itemprop="name">{{ link.name }}</span>
               </a>
             </li>
@@ -63,11 +49,7 @@
         <nav aria-label="Services Navigation">
           <ul class="footer-links">
             <li *ngFor="let service of servicesList">
-              <a
-                href="#capabilities"
-                (click)="scrollToSection('capabilities', $event)"
-                itemprop="url"
-              >
+              <a href="#capabilities" (click)="scrollToSection('capabilities', $event)" itemprop="url">
                 <span itemprop="name">{{ service }}</span>
               </a>
             </li>
@@ -84,9 +66,10 @@
             <div class="details">
               <h6>Workshop</h6>
               <p>
-                <span itemprop="streetAddress">GIDC Industrial Estate</span>,<br />
-                <span itemprop="addressLocality">Vadodara</span>,<br />
-                <span itemprop="addressRegion">Gujarat</span>-<span itemprop="postalCode">390010</span>,
+                <span itemprop="streetAddress">SURVEY NO:-166, HARI OM IND.AREA, PLOT NO:-66, Kothariya Ring Road,
+                  SANDHIYA PUL</span>,<br />
+                <span itemprop="addressLocality">Rajkot</span>,<br />
+                <span itemprop="addressRegion">Gujarat</span>-<span itemprop="postalCode">360022</span>,
                 <span itemprop="addressCountry">India</span>
               </p>
             </div>
@@ -96,7 +79,7 @@
             <i class="fas fa-phone-alt icon"></i>
             <div class="details">
               <h6>Phone</h6>
-              <a href="tel:+919714073207" class="contact-link" itemprop="telephone">+91 97140 73207</a>
+              <a href="tel:+919725995010" class="contact-link" itemprop="telephone">+91 9725995010</a>
             </div>
           </div>
 
@@ -104,7 +87,8 @@
             <i class="fas fa-envelope icon"></i>
             <div class="details">
               <h6>Email</h6>
-              <a href="mailto:info@khodiyarkruparing.com" class="contact-link" itemprop="email">info&#64;khodiyarkruparing.com</a>
+              <a href="mailto:info@khodiyarkruparing.com" class="contact-link"
+                itemprop="email">info&#64;khodiyarkruparing.com</a>
             </div>
           </div>
         </address>
@@ -122,7 +106,8 @@
         <div class="col-md-6 text-center text-md-end">
           <p class="developer-text">
             Managed by
-            <a href="https://aalekhansoftware.com/" target="_blank" rel="noopener noreferrer" class="dev-link">Aalekhan Software</a>
+            <a href="https://aalekhansoftware.com/" target="_blank" rel="noopener noreferrer" class="dev-link">Aalekhan
+              Software</a>
           </p>
         </div>
       </div>
