@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="processTitle processDesc">
+  <title id="processTitle">Turning Process</title>
+  <desc id="processDesc">A cutting tool engaging a rotating ring workpiece, producing a continuous chip and sparks.</desc>
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="0.6" stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="tool" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d5843d"/>
+      <stop offset="1" stop-color="#a34f08"/>
+    </linearGradient>
+    <linearGradient id="turret" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e5ab75"/>
+      <stop offset="1" stop-color="#a34f08"/>
+    </linearGradient>
+    <linearGradient id="axis" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#224d9c"/>
+      <stop offset="1" stop-color="#7490c6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- floor shadow -->
+  <ellipse cx="400" cy="510" rx="310" ry="20" fill="rgba(18,42,85,0.10)"/>
+
+  <!-- stand -->
+  <rect x="180" y="440" width="440" height="56" rx="14" fill="url(#axis)"/>
+  <rect x="200" y="428" width="400" height="14" rx="7" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- rotating motion indicator -->
+  <path d="M 316 202 A 62 62 0 1 1 378 168" stroke="#224d9c" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 14" opacity="0.7"/>
+  <polygon points="390,156 384,172 400,172" fill="#224d9c"/>
+
+  <!-- workpiece ring (cross-section) -->
+  <rect x="210" y="200" width="270" height="150" rx="10" fill="url(#ring)"/>
+  <rect x="210" y="256" width="270" height="38" rx="6" fill="rgba(255,255,255,0.35)"/>
+
+  <!-- tool holder on turret -->
+  <rect x="470" y="330" width="46" height="64" rx="8" fill="url(#turret)"/>
+  <rect x="440" y="356" width="66" height="18" rx="4" fill="#a34f08"/>
+  <polygon points="506,356 524,356 524,368 512,374" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- chip being peeled -->
+  <path d="M 524 352 C 548 338 566 348 572 366 C 578 384 562 398 540 400 C 520 402 508 390 512 372" stroke="#f2b41c" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M 524 352 C 542 340 560 344 566 360 C 571 374 558 388 540 390" stroke="#f5c34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- sparks -->
+  <circle cx="536" cy="360" r="4" fill="#f2b41c"/>
+  <circle cx="562" cy="366" r="3" fill="#f5c34a"/>
+  <circle cx="546" cy="344" r="2.5" fill="#f2b41c"/>
+  <circle cx="586" cy="378" r="3.5" fill="#c9680d"/>
+
+  <!-- labels -->
+  <text x="220" y="176" font-family="DM Sans, sans-serif" font-size="19" font-weight="600" fill="#224d9c">Workpiece</text>
+  <text x="478" y="440" font-family="DM Sans, sans-serif" font-size="19" font-weight="600" fill="#a34f08">Cutting tool</text>
+
+  <!-- measurement callout -->
+  <path d="M 345 352 L 345 472" stroke="#64748b" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+  <path d="M 330 352 L 360 352" stroke="#64748b" stroke-width="3"/>
+  <path d="M 330 472 L 360 472" stroke="#64748b" stroke-width="3"/>
+  <text x="342" y="416" font-family="DM Sans, sans-serif" font-size="16" font-weight="700" fill="#c9680d" transform="rotate(-90 342 416)">up to 500 mm OD</text>
+</svg>

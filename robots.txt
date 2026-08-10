@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aalekhanSoftware.github.io/khodiyarkrupa-ring/sitemap.xml
