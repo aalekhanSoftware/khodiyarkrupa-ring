@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="latheTitle latheDesc">
-  <title id="latheTitle">CNC Lathe Turning Center</title>
+  <title id="latheTitle">CNC Turning Center</title>
   <desc id="latheDesc">Illustration of a CNC turning center machining a ring component held in a three-jaw chuck, with tool turret and tailstock.</desc>
   <defs>
     <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1">
