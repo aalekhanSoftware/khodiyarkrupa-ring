@@ -51,10 +51,10 @@ interface ShowcaseItem {
 export class HomeComponent implements OnInit, OnDestroy {
   private readonly baseUrl = environment.baseUrl;
 
-  readonly orgName = 'Khodiyar Krupa Ring';
+  readonly orgName = 'Khodiyar Krupa Ring Turning';
   private readonly whatsappNumber = '919725995010';
   private readonly phoneTel = '+919725995010';
-  private readonly author = 'Khodiyar Krupa Ring';
+  private readonly author = 'Khodiyar Krupa Ring Turning';
 
   categories: Category[] = [
     {
@@ -83,11 +83,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   capabilities: Capability[] = [
     {
       title: 'CNC Turning Job Work',
-      desc: 'Rough and finish turning on CNC lathes. We work on customer drawings and samples, from single-piece prototypes to regular batch supply.'
+      desc: 'Rough and finish turning on CNC machines. We work on customer drawings and samples, from single-piece prototypes to regular batch supply.'
     },
     {
       title: 'Rings Up to 500mm OD',
-      desc: 'Ring manufacturing from 50mm to 500mm outer diameter. Larger rings are turned, bored and faced on heavy duty lathes with consistent roundness.'
+      desc: 'Ring manufacturing from 50mm to 500mm outer diameter. Larger rings are turned, bored and faced on heavy duty CNC turning machines with consistent roundness.'
     },
     {
       title: 'Boring & Drilling',
@@ -112,7 +112,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   showcase: ShowcaseItem[] = [
     {
       src: 'assets/svg/cnc-lathe.svg',
-      alt: 'CNC lathe turning center machining a ring component in a three-jaw chuck',
+      alt: 'CNC turning center machining a ring component in a three-jaw chuck',
       caption: 'CNC Turning Center'
     },
     {
@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'Up to 500mm OD',
       icon: 'expand-alt',
-      desc: 'Our lathes handle rings and turned components from small bushes up to 500mm outer diameter without compromising on accuracy.'
+      desc: 'Our CNC turning machines handle rings and turned components from small bushes up to 500mm outer diameter without compromising on accuracy.'
     },
     {
       title: 'On-Time Delivery',
@@ -222,11 +222,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   private setMetaData() {
     if (this.transferState.hasKey(META_KEY)) return;
 
-    const pageTitle = 'Khodiyar Krupa Ring | CNC Job Work & Ring Manufacturing - Auto, Machinery & Vehicle Parts up to 500mm OD';
+    const pageTitle = 'Khodiyar Krupa Ring Turning | CNC Job Work & Ring Manufacturing - Auto, Machinery & Vehicle Parts up to 500mm OD';
     const pageDescription =
-      'Khodiyar Krupa Ring is a precision CNC job work workshop manufacturing auto parts, machinery parts and vehicle parts. Ring manufacturing up to 500mm OD with turning, boring and finishing under one roof.';
+      'Khodiyar Krupa Ring Turning is a precision CNC job work workshop manufacturing auto parts, machinery parts and vehicle parts. Ring manufacturing up to 500mm OD with turning, boring and finishing under one roof.';
     const pageKeywords =
-      'CNC job work, ring manufacturing, auto parts manufacturer, machinery parts job work, vehicle parts supplier, 500mm OD rings, precision turned components, CNC turning Gujarat, rings manufacturer Rajkot';
+      'CNC job work, ring manufacturing, auto parts manufacturer, machinery parts job work, vehicle parts supplier, 500mm OD rings, precision turned components, CNC turning Gujarat, rings manufacturer Rajkot, Khodiyar Krupa Ring Turning';
 
     this.title.setTitle(pageTitle);
 

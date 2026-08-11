@@ -21,7 +21,7 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   currentYear = new Date().getFullYear();
 
-  readonly organizationName = 'Khodiyar Krupa Ring';
+  readonly organizationName = 'Khodiyar Krupa Ring Turning';
   readonly organizationDescription =
     'Precision CNC job work workshop for ring manufacturing. We machine auto parts, machinery parts and vehicle parts up to 500mm OD with turning, boring, threading and finishing under one roof.';
   readonly logoUrl = `${this.baseUrl}/assets/logo/logo.jpeg`;
